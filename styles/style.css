@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Header styles */
+header {
+    background: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: #0000A0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+}
+
+/* Hero section styles */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #0000A0;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #FF1493;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #FF1493;
+    color: white;
+}
+
+/* Services section styles */
+.services {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.service-title{
+    color: #333;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.service-title::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: #FF1493;
+}
+
+.services h2 {
+    font-size: 2rem;
+    color: #0000A0;
+    margin-bottom: 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #0000A0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Testimonials section styles */
+.testimonials {
+    background-color: #0000A0;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial-quotes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    width: 70%;
+    margin: auto;
+    border-bottom: 2px solid #FF1493;
+    font-size: 1.5rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.testimonial-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.testimonial-item q {
+    font-style: italic;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.enfoques {
+    padding: 4rem 0;
+    text-align: center;
+}
+.enfoques h2 {
+    font-size: 2.5rem;
+    color: #0000A0;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.enfoques h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #FF1493;
+}
+.enfoques-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.enfoque-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.enfoque-item img {
+    width: 200px;
+    height: 250px;
+    border-top-left-radius: 120px 120px;
+    border-top-right-radius: 120px 120px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.enfoque-item h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.enfoque-item h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: #FF1493;
+}
+
+.enfoque-text{
+    width: 60%;
+    margin: auto;
+}
