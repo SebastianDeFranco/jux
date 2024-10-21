@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julieta's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link rel="stylesheet" href="./styles/style.css">
+    <title>Julieta's Portfolio</title>
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#002091',
+                        secondary: '#ee057e',
+                    }
+                }
+            }
+        }
+    </script>
     <style type="text/tailwindcss">
         @layer utilities {
           .content-auto {
@@ -14,12 +30,16 @@
         }
       </style>
 </head>
+
 <body>
 
-    <nav class="bg-gray-50">
+    <nav class="bg-white border-primary dark:bg-primary fixed top-0 left-0 w-full z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span href="#" class="bg-white text-primary rounded-full py-3.5 px-3">JUX</span>
+            </a>
             <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -30,55 +50,85 @@
             </button>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul
-                    class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-primary">
                     <li>
-                        <a href="#" class="block py-2 px-3 text-white rounded md:p-0 dark:text-white"
+                        <a href="#inicio"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white"
                             aria-current="page">Inicio</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0">Sobre
+                        <a href="#sobre-mi"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre
                             mí</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0">Mis
+                        <a href="#enfoques"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Mis
                             enfoques</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0">Mis
+                        <a href="#servicios"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Mis
                             servicios</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0">Testimonios</a>
+                        <a href="#testimonios"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Testimonios</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0">Diseño
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Diseño
                             UX UI</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0">Educación</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Educación</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0">Contactame</a>
+                        <a href="#contacto"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contáctame</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="hero">
+
+
+    <section class="hero" id="inicio">
         <div class="container">
-            <div class="logo">JUX</div>
             <h1>¡Hola, soy Julieta!</h1>
             <div class="hero-buttons">
                 <a href="#diseno" class="btn">Diseño UX UI</a>
                 <a href="#estrategia" class="btn">Estrategia digital a medida</a>
-                <a href="#contacto" class="btn">Contactame</a>
+                <a href="#contacto" class="btn">Contáctame</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="sobre-mi">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <div class="accent-line"></div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Soy una apasionada diseñadora UX/UI con años de experiencia creando interfaces intuitivas y
+                        atractivas. Mi enfoque se centra en combinar la estética con la funcionalidad para ofrecer
+                        experiencias de usuario excepcionales.
+                    </p>
+                    <p>
+                        Mi proceso de diseño se basa en la investigación profunda, la empatía con el usuario y la
+                        iteración constante. Creo firmemente en el poder del diseño para resolver problemas y mejorar la
+                        vida de las personas.
+                    </p>
+                    <div class="mt-5">
+                        <a href="#proyectos" class="btn">Ver Proyectos</a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-bg"></div>
+                    <img src="https://placehold.co/400x400" alt="Retrato de Julieta" class="designer-image">
+                </div>
             </div>
         </div>
     </section>
@@ -88,19 +138,23 @@
             <h2>Enfoques en diseño</h2>
             <div class="enfoques-grid">
                 <div class="enfoque-item">
-                    <img src="./images/diseño.jpg" alt="Creatividad">
+                    <img src="https://placehold.co/200x250" alt="Creatividad">
                     <h3>Creatividad</h3>
                 </div>
                 <div class="enfoque-item">
-                    <img src="./images/diseño2.jpg" alt="Experiencia">
+                    <img src="https://placehold.co/200x250" alt="Experiencia">
                     <h3>Experiencia</h3>
                 </div>
                 <div class="enfoque-item">
-                    <img src="./images/diseño3.jpg" alt="Conexión">
+                    <img src="https://placehold.co/200x250" alt="Conexión">
                     <h3>Conexión</h3>
                 </div>
             </div>
-            <p class="enfoque-text">Mi misión es transformar tus ideas en experiencias visuales impactantes y efectivas. Me aseguro de que cada proyecto no solo sea visualmente cautivador, sino también intuitivo y fácil de entender para las personas usuarias. Con un enfoque en la creatividad y un cuidado en la experiencia, ofrezco un servicio que va más allá de lo estético: garantizo que tus proyectos conecten y destaquen.</p>
+            <p class="enfoque-text">Mi misión es transformar tus ideas en experiencias visuales impactantes y efectivas.
+                Me aseguro de que cada proyecto no solo sea visualmente cautivador, sino también intuitivo y fácil de
+                entender para las personas usuarias. Con un enfoque en la creatividad y un cuidado en la experiencia,
+                ofrezco un servicio que va más allá de lo estético: garantizo que tus proyectos conecten y destaquen.
+            </p>
         </div>
     </section>
 
@@ -111,7 +165,8 @@
                 <div class="service-item">
                     <div class="service-icon">🛒</div>
                     <h3 class="service-title">Creación de Tienda Online</h3>
-                    <p>Asesoría de 30 minutos<br>Creación de la tienda en <strong>Tienda Nube</strong> o <strong>Empretienda</strong></p>
+                    <p>Asesoría de 30 minutos<br>Creación de la tienda en <strong>Tienda Nube</strong> o
+                        <strong>Empretienda</strong></p>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">💬</div>
@@ -121,7 +176,8 @@
                 <div class="service-item">
                     <div class="service-icon">🎨</div>
                     <h3 class="service-title">Diseño en Canva</h3>
-                    <p>Templates para RRSS<br>Ebooks<br>Workbooks<br>Folletos/Flyers<br>Invitaciones<br>Lead Magnet<br>Presentaciones<br>Sitios web</p>
+                    <p>Templates para RRSS<br>Ebooks<br>Workbooks<br>Folletos/Flyers<br>Invitaciones<br>Lead
+                        Magnet<br>Presentaciones<br>Sitios web</p>
                 </div>
             </div>
         </div>
@@ -133,34 +189,86 @@
             <div class="testimonials-grid">
                 <div class="testimonial-item">
                     <q class="testimonial-quotes">Una persona muy entusiasta, se nota que ama lo que hace</q>
-                    <p>Julieta me ayudó a crear mi ebook de recetas y no puedo estar más que feliz con el resultado. El diseño en Canva fue creativo y alineado con lo que tenía en mente. Además, ajustó cada detalle según mis necesidades y se aseguró de que todo quedara perfecto. La recomiendo al 100%</p>
+                    <p>Julieta me ayudó a crear mi ebook de recetas y no puedo estar más que feliz con el resultado. El
+                        diseño en Canva fue creativo y alineado con lo que tenía en mente. Además,
+                        ajustó cada detalle según mis necesidades y se aseguró de que todo quedara perfecto. La
+                        recomiendo al 100%</p>
                     <p><strong>Micaela, Nutricionista</strong></p>
                 </div>
                 <div class="testimonial-item">
                     <q class="testimonial-quotes">Me dio tips para que pueda personalizar mis plantillas</q>
-                    <p>Buscaba algo fresco, dinámico y que pudiera usar fácilmente, ¡y ella lo consiguió a la perfección! Ahora mis posts tienen un look minimalista y aesthetic. La mejor parte es que también me dio tips sobre cómo personalizar las plantillas para mantener la consistencia en mi branding. Sin duda seguiré trabajando con ella.</p>
+                    <p>Buscaba algo fresco, dinámico y que pudiera usar fácilmente, ¡y ella lo consiguió a la
+                        perfección! Ahora mis posts tienen un look minimalista y aesthetic. La mejor parte es que
+                        también me dio tips sobre cómo personalizar las plantillas para mantener la consistencia en mi
+                        branding. Sin duda seguiré trabajando con ella.</p>
                     <p><strong>Carmen, Emprendedora</strong></p>
                 </div>
                 <div class="testimonial-item">
                     <q class="testimonial-quotes">Súper profesional y comprometida</q>
-                    <p>Necesitaba una presentación profesional y visualmente atractiva para una reunión importante, y ella logró superar mis expectativas. El diseño fue limpio, moderno y con un gran enfoque en la experiencia del usuario. Además, la comunicación fue fluida y cumplió con los plazos perfectamente. Gracias Juli!!!!</p>
+                    <p>Necesitaba una presentación profesional y visualmente atractiva para una reunión importante, y
+                        ella logró superar mis expectativas. El diseño fue limpio, moderno y con un gran enfoque en la
+                        experiencia del usuario. Además, la comunicación fue fluida y cumplió con los plazos
+                        perfectamente. Gracias Juli!!!!</p>
                     <p><strong>Ana, Entrenadora</strong></p>
                 </div>
             </div>
         </div>
     </section>
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-content">
+                    <h2>¡Contáctame y comencemos a dar vida a tus proyectos!</h2>
+                    <div class="accent-line-contact"></div>
+                    <p class="contact-subtitle">Para ver más de mi trabajo, visitá mis redes:</p>
+                    <ul class="contact-links">
+                        <li>
+                            <img src="https://placehold.co/32x32/FF1493/FFFFFF?text=F" alt="Fiverr icon">
+                            <a href="https://www.fiverr.com/julietadefranco" target="_blank">FIVERR @julietadefranco</a>
+                        </li>
+                        <li>
+                            <img src="https://placehold.co/32x32/FF1493/FFFFFF?text=@" alt="Email icon">
+                            <a href="mailto:julietagdefranco@gmail.com">CORREO julietagdefranco@gmail.com</a>
+                        </li>
+                        <li>
+                            <img src="https://placehold.co/32x32/FF1493/FFFFFF?text=in" alt="LinkedIn icon">
+                            <a href="https://www.linkedin.com/in/julietadefranco" target="_blank">LINKEDIN
+                                julietadefranco</a>
+                        </li>
+                        <li>
+                            <img src="https://placehold.co/32x32/FF1493/FFFFFF?text=CV" alt="CV icon">
+                            <a href="#curriculum">CURRICULUM</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-image">
+                    <img src="https://placehold.co/400x400" alt="Julieta trabajando">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script>
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar-menu').classList.toggle('active');
+        });
+    </script> -->
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
-          }
-        }
-      </script>
+        // Initialize smooth scroll
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 800,
+            speedAsDuration: true,
+            easing: 'easeInOutCubic'
+        });
+
+        // Existing script for mobile menu toggle
+        document.querySelector('.navbar-toggle').addEventListener('click', function () {
+            document.querySelector('.navbar-menu').classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
